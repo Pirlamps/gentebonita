@@ -37,13 +37,21 @@ public class ImageSlider extends Fragment {
         // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
 
         ImageView img1 = (ImageView) view.findViewById(R.id.imgprinc);
-        if(url.equals("defaultx"))
+        if(url.equals("0"))
         {
             img1.setImageResource(R.drawable.fotodefault);
         }
-        else
+        else if(url.equals("1"))
         {
-            img1.setImageResource(R.drawable.fotodefault);
+            img1.setImageResource(R.drawable.fotoslide1);
+        }
+        else if(url.equals("2"))
+        {
+            img1.setImageResource(R.drawable.fotoslide2);
+        }
+        else if(url.equals("3"))
+        {
+            img1.setImageResource(R.drawable.fotoslide3);
         }
     }
 }
