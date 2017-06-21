@@ -154,10 +154,10 @@ public class MainActivity extends AppCompatActivity { //implements ViewPager.OnP
     private void setupViewPager(ViewPager viewPager) {
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new TabVotacao(), "");
-        adapter.addFragment(new TabVotacao(), "");
-        adapter.addFragment(new TabVotacao(), "");
-        adapter.addFragment(new TabVotacao(), "");
-        adapter.addFragment(new TabVotacao(), "");
+        adapter.addFragment(new TabMapa(), "");
+        adapter.addFragment(new TabChat(), "");
+        adapter.addFragment(new TabBusca(), "");
+        adapter.addFragment(new TabFiltro(), "");
 
         viewPager.setAdapter(adapter);
     }
