@@ -59,6 +59,7 @@ import java.util.List;
 import java.util.Map;
 
 
+
 public class TabVotacao extends Fragment
 {
 
@@ -85,6 +86,7 @@ public class TabVotacao extends Fragment
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
     }
 
 

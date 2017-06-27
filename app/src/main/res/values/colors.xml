@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#343434</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorRed">#dd4949</color>
     <color name="colorslidefocus">#CD2F2F</color>
     <color name="colorslide">#CCCCCC</color>
 </resources>

@@ -1,33 +1,344 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v4.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorPrimaryDark">
-
-        <LinearLayout
+        <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:background="#FFFFFF">
 
-            <TextView
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText android:id="@+id/buscamapa"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="Busque pelo nome"
+                    android:background="#FFFFFF"/>
+
+                <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:id="@+id/map">
+
+                    <android.support.design.widget.FloatingActionButton
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/fab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        app:backgroundTint="@color/colorRed"
+                        android:tint="#FFFFFF"
+                        app:borderWidth="0dp"
+                        android:src="@drawable/fil2" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:id="@+id/map2"
+                    android:visibility="gone">
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:text="Lista">
+
+                 </TextView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:id="@+id/map3"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Check-in">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:id="@+id/map4"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Cruzados">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+                <android.support.design.widget.CoordinatorLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:fitsSystemWindows="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/botaomapa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/i1v"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="0.5"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:padding="2dp"
+                                android:src="@drawable/barmapv" />
+
+                            <ImageView
+                                android:id="@+id/i1"
+                                android:visibility="gone"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="0.5"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:padding="2dp"
+                                android:src="@drawable/barmap" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/colorRed"
+                                android:id="@+id/t1"
+                                android:text="Mapa">
+
+                            </TextView>
+
+
+                            </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/botaolista"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/i2"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="0.5"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:padding="2dp"
+                                android:src="@drawable/barlista" />
+
+                            <ImageView
+                                android:id="@+id/i2v"
+                                android:visibility="gone"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="0.5"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:padding="2dp"
+                                android:src="@drawable/barlistav" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:id="@+id/t2"
+                                android:textColor="@color/colorslide"
+                                android:text="Lista">
+
+                            </TextView>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/botaocheckin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/i3"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="0.5"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:padding="2dp"
+                                android:src="@drawable/barcheck" />
+
+                            <ImageView
+                                android:id="@+id/i3v"
+                                android:visibility="gone"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="0.5"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:padding="2dp"
+                                android:src="@drawable/barcheckv" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:id="@+id/t3"
+                                android:textColor="@color/colorslide"
+                                android:text="Check-in">
+
+                            </TextView>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/botaocruzados"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/i4"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="0.5"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:padding="2dp"
+                                android:src="@drawable/barcruzado" />
+
+                            <ImageView
+                                android:id="@+id/i4v"
+                                android:visibility="gone"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="0.5"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:padding="2dp"
+                                android:src="@drawable/barcruzadov" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:id="@+id/t4"
+                                android:textColor="@color/colorslide"
+                                android:text="Cruzados">
+
+                            </TextView>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+            <!--<RelativeLayout
+                android:id="@+id/loadingPane0"
+                android:layout_gravity="top|end"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="7dp"
-                android:padding="7dp"
-                android:text="Aqui é o Mapa"
-                android:textColor="#FFFFFF"
-                android:textSize="24dp"
-                android:textStyle="bold" />
+                android:padding="10dp"
+                android:gravity="center" >
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true" />
+            </RelativeLayout>-->
 
 
-        </LinearLayout>
 
+        </android.support.design.widget.CoordinatorLayout>
+
+            </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
+
+
 
 
 </LinearLayout>
