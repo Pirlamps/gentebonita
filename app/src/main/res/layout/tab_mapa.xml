@@ -49,12 +49,7 @@
                     android:id="@+id/map2"
                     android:visibility="gone">
 
-                 <TextView
-                     android:layout_width="match_parent"
-                     android:layout_height="match_parent"
-                     android:text="Lista">
-
-                 </TextView>
+                    <include  layout="@layout/tab_mapa_lista" />
 
                 </RelativeLayout>
 
@@ -65,12 +60,7 @@
                     android:id="@+id/map3"
                     android:visibility="gone">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Check-in">
-
-                    </TextView>
+                    <include  layout="@layout/tab_mapa_checkin" />
 
                 </RelativeLayout>
 
@@ -81,12 +71,7 @@
                     android:id="@+id/map4"
                     android:visibility="gone">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Cruzados">
-
-                    </TextView>
+                    <include  layout="@layout/tab_mapa_cruzados" />
 
                 </RelativeLayout>
 
