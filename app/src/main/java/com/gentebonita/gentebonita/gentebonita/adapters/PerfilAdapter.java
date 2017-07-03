@@ -28,10 +28,17 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import java.math.BigDecimal;
 
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
+
 //import com.gentebonita.gentebonita.gentebonita.FiltroActivity;
 //import com.gentebonita.gentebonita.gentebonita.OfertaEspActivity;
 import com.gentebonita.gentebonita.gentebonita.R;
 import com.gentebonita.gentebonita.gentebonita.models.Perfil;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,6 +84,29 @@ public class PerfilAdapter extends RecyclerView.Adapter<PerfilAdapter.MyViewHold
         this.mContext = context;
     }
 
+    private Bitmap getCircleBitmap(Bitmap bitmap) {
+        final Bitmap output = Bitmap.createBitmap(bitmap.getWidth(),
+                bitmap.getHeight(), Bitmap.Config.ARGB_8888);
+        final Canvas canvas = new Canvas(output);
+
+        final int color = Color.RED;
+        final Paint paint = new Paint();
+        final Rect rect = new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight());
+        final RectF rectF = new RectF(rect);
+
+        paint.setAntiAlias(true);
+        canvas.drawARGB(0, 0, 0, 0);
+        paint.setColor(color);
+        canvas.drawOval(rectF, paint);
+
+        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
+        canvas.drawBitmap(bitmap, rect, rect, paint);
+
+        bitmap.recycle();
+
+        return output;
+    }
+
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -96,7 +126,28 @@ public class PerfilAdapter extends RecyclerView.Adapter<PerfilAdapter.MyViewHold
             holder.nome.setText(fid.getNome());
             holder.idade.setText(fid.getIdade());
             holder.nota.setText(nota.toString());
-            holder.imagem.setImageResource(R.drawable.fotoslide1);
+
+        //holder.imagem.setImageResource(R.drawable.fotoslide1);
+
+        String img1 = fid.getImagem();
+        if(img1==null||img1.equals("")||img1.equals("null"))
+        {
+            Bitmap bm = BitmapFactory.decodeResource(mContext.getResources(),
+                    R.drawable.fotodefault);
+            holder.imagem.setImageBitmap(getCircleBitmap(bm));
+        }
+        else
+        {
+            Bitmap bm = BitmapFactory.decodeResource(mContext.getResources(),
+                    R.drawable.fotoslide1);
+            holder.imagem.setImageBitmap(getCircleBitmap(bm));
+            /*ImageLoader imageLoader = ImageLoader.getInstance();
+            DisplayImageOptions options = new DisplayImageOptions.Builder().cacheInMemory(true)
+                    .displayer(new RoundedBitmapDisplayer(150))
+                    .cacheOnDisk(true).resetViewBeforeLoading(true)
+                    .build();
+            imageLoader.displayImage(img1, holder.imagem, options);*/
+        }
     }
     @Override
     public int getItemCount() {
