@@ -3,13 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.cne.cne.cne.MainActivity">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/perfil"
         android:orderInCategory="100"
-        android:title="Alterar Perfil"
+        android:title="Perfil"
         app:showAsAction="never" />
     <item
-        android:id="@+id/sair"
+        android:id="@+id/logout"
         android:orderInCategory="100"
-        android:title="Sair"
+        android:title="Logout"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/descadastrar"
+        android:orderInCategory="100"
+        android:title="Descadastrar"
         app:showAsAction="never" />
 </menu>

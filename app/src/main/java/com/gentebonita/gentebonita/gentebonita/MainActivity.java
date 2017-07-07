@@ -151,6 +151,40 @@ public class MainActivity extends AppCompatActivity { //implements ViewPager.OnP
     }
 
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        if (id == R.id.perfil) {
+            //Intent myIntent = new Intent(MainActivity.this, NewPerfilActivity.class);
+            //startActivity(myIntent);
+        }
+        else if(id == R.id.logout) {
+
+            finish();
+        }
+        else if (id == R.id.descadastrar) {
+            //Intent myIntent = new Intent(MainActivity.this, NewEmpregadorActivity.class);
+            //startActivity(myIntent);
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
     private void setupViewPager(ViewPager viewPager) {
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new TabVotacao(), "");

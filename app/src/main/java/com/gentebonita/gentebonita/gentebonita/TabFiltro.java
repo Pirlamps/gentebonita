@@ -49,6 +49,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.appyvet.rangebar.RangeBar;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -66,6 +67,7 @@ public class TabFiltro  extends Fragment{
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private static ViewPagerAdapter adapter;
+    private RangeBar rangebar;
     FuncoesBasicas fb = new FuncoesBasicas();
 
     private int dotsCount;
@@ -81,6 +83,7 @@ public class TabFiltro  extends Fragment{
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
     }
 
 
@@ -98,6 +101,21 @@ public class TabFiltro  extends Fragment{
     // This event is triggered soon after onCreateView().
     // Any view setup should occur here.  E.g., view lookups and attaching view listeners.
     public void onViewCreated(View view, Bundle savedInstanceState) {
+
+        rangebar = (RangeBar) view.findViewById(R.id.notagb);
+
+        final TextView notafiltro = (TextView) view.findViewById(R.id.notafiltro);
+
+        // Sets the display values of the indices
+        rangebar.setOnRangeBarChangeListener(new RangeBar.OnRangeBarChangeListener() {
+            @Override
+            public void onRangeChangeListener(RangeBar rangeBar, int leftPinIndex,
+                                              int rightPinIndex,
+                                              String leftPinValue, String rightPinValue) {
+                notafiltro.setText("(Nota " + rightPinIndex + " )");
+            }
+
+        });
 
 
     }
