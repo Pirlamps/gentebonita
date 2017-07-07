@@ -53,6 +53,7 @@ import com.appyvet.rangebar.RangeBar;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -67,7 +68,9 @@ public class TabFiltro  extends Fragment{
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private static ViewPagerAdapter adapter;
-    private RangeBar rangebar;
+    private RangeBar notagb, distancia;
+    private TextView genero, fumante, pets, religiao, signo, interesses, alimentacao;
+    private EditText idadede, idadeate, palavras;
     FuncoesBasicas fb = new FuncoesBasicas();
 
     private int dotsCount;
@@ -102,19 +105,98 @@ public class TabFiltro  extends Fragment{
     // Any view setup should occur here.  E.g., view lookups and attaching view listeners.
     public void onViewCreated(View view, Bundle savedInstanceState) {
 
-        rangebar = (RangeBar) view.findViewById(R.id.notagb);
+        notagb = (RangeBar) view.findViewById(R.id.notagb);
+        distancia = (RangeBar) view.findViewById(R.id.distancia);
 
         final TextView notafiltro = (TextView) view.findViewById(R.id.notafiltro);
+        final TextView valordistancia = (TextView) view.findViewById(R.id.valordistancia);
 
         // Sets the display values of the indices
-        rangebar.setOnRangeBarChangeListener(new RangeBar.OnRangeBarChangeListener() {
+        notagb.setOnRangeBarChangeListener(new RangeBar.OnRangeBarChangeListener() {
             @Override
             public void onRangeChangeListener(RangeBar rangeBar, int leftPinIndex,
                                               int rightPinIndex,
                                               String leftPinValue, String rightPinValue) {
-                notafiltro.setText("(Nota " + rightPinIndex + " )");
+                notafiltro.setText("(Nota " + (rightPinIndex+1) + ")");
             }
 
+        });
+
+        distancia.setOnRangeBarChangeListener(new RangeBar.OnRangeBarChangeListener() {
+            @Override
+            public void onRangeChangeListener(RangeBar rangeBar, int leftPinIndex,
+                                              int rightPinIndex,
+                                              String leftPinValue, String rightPinValue) {
+                if((rightPinIndex+1) == 150)  valordistancia.setText("(Sem limite)");
+                else valordistancia.setText("(" + (rightPinIndex+1) + " Km)");
+            }
+
+        });
+
+        //private TextView genero, fumante, pets, religiao, signo, interesses, alimentacao;
+        //private EditText idadede, idadeate, palavras;
+
+        genero = (TextView) view.findViewById(R.id.genero);
+        genero.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
+                //getActivity().startActivity(myIntent);
+            }
+        });
+
+        fumante = (TextView) view.findViewById(R.id.fumante);
+        fumante.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
+                //getActivity().startActivity(myIntent);
+            }
+        });
+
+        pets = (TextView) view.findViewById(R.id.pets);
+        pets.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
+                //getActivity().startActivity(myIntent);
+            }
+        });
+
+        religiao = (TextView) view.findViewById(R.id.religiao);
+        religiao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
+                //getActivity().startActivity(myIntent);
+            }
+        });
+
+        signo = (TextView) view.findViewById(R.id.signo);
+        signo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
+                //getActivity().startActivity(myIntent);
+            }
+        });
+
+        interesses = (TextView) view.findViewById(R.id.interesses);
+        interesses.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
+                //getActivity().startActivity(myIntent);
+            }
+        });
+
+        alimentacao = (TextView) view.findViewById(R.id.alimentacao);
+        alimentacao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
+                //getActivity().startActivity(myIntent);
+            }
         });
 
 
