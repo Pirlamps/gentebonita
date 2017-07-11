@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <android.support.v7.widget.Toolbar
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="right"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:subtitleTextColor="@android:color/white"
+            app:titleTextColor="@android:color/white">
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:scaleType="fitXY"
+                android:src="@drawable/dolar" />
+
+
+            <TextView
+                android:id="@+id/textoabafiltro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF"
+                android:text="Opções"
+                android:textSize="26dp"
+                android:textStyle="bold" />
+
+            <!--<ImageView
+                android:layout_width="55dp"
+                android:layout_height="40dp"
+                android:layout_gravity="left"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.1"
+                android:scaleType="fitXY"
+                android:src="@drawable/olho" />-->
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/elemento1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elemento 1"
+                android:padding="10dp"
+                android:textColor="@color/colorWhite"
+                android:buttonTint="@color/colorWhite"
+                android:onClick="onCheckboxClicked"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/elemento2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elemento 2"
+                android:padding="10dp"
+                android:textColor="@color/colorWhite"
+                android:buttonTint="@color/colorWhite"
+                android:onClick="onCheckboxClicked"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/elemento3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elemento 3"
+                android:padding="10dp"
+                android:textColor="@color/colorWhite"
+                android:buttonTint="@color/colorWhite"
+                android:onClick="onCheckboxClicked"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/elemento4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elemento 4"
+                android:padding="10dp"
+                android:textColor="@color/colorWhite"
+                android:buttonTint="@color/colorWhite"
+                android:onClick="onCheckboxClicked"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/elemento5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elemento 5"
+                android:padding="10dp"
+                android:textColor="@color/colorWhite"
+                android:buttonTint="@color/colorWhite"
+                android:onClick="onCheckboxClicked"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

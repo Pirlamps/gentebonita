@@ -140,6 +140,11 @@ public class TabFiltro  extends Fragment{
         genero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
+                Bundle b = new Bundle();
+                b.putString("id", "genero"); //Your id
+                myIntent.putExtras(b); //Put your id to your next Intent
+                getActivity().startActivity(myIntent);
                 //Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
                 //getActivity().startActivity(myIntent);
             }
@@ -149,8 +154,8 @@ public class TabFiltro  extends Fragment{
         fumante.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
-                //getActivity().startActivity(myIntent);
+                Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
+                getActivity().startActivity(myIntent);
             }
         });
 
@@ -158,8 +163,8 @@ public class TabFiltro  extends Fragment{
         pets.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
-                //getActivity().startActivity(myIntent);
+                Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
+                getActivity().startActivity(myIntent);
             }
         });
 
@@ -167,8 +172,8 @@ public class TabFiltro  extends Fragment{
         religiao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
-                //getActivity().startActivity(myIntent);
+                Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
+                getActivity().startActivity(myIntent);
             }
         });
 
@@ -176,8 +181,8 @@ public class TabFiltro  extends Fragment{
         signo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
-                //getActivity().startActivity(myIntent);
+                Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
+                getActivity().startActivity(myIntent);
             }
         });
 
@@ -185,8 +190,8 @@ public class TabFiltro  extends Fragment{
         interesses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
-                //getActivity().startActivity(myIntent);
+                Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
+                getActivity().startActivity(myIntent);
             }
         });
 
@@ -194,8 +199,8 @@ public class TabFiltro  extends Fragment{
         alimentacao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
-                //getActivity().startActivity(myIntent);
+                Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
+                getActivity().startActivity(myIntent);
             }
         });
 

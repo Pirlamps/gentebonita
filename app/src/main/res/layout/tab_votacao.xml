@@ -19,7 +19,7 @@
                 android:layout_marginLeft="7dp"
                 android:padding="7dp"
                 android:text="Raíssa, 25"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/colorWhite"
                 android:textSize="24dp"
                 android:textStyle="bold" />
 
