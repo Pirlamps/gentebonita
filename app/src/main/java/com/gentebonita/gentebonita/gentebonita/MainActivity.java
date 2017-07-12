@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity { //implements ViewPager.OnP
 
     private int dotsCount;
     private ImageView[] dots;
+    private ImageView credito;
     private LinearLayout pager_indicator;
 
     @Override
@@ -73,6 +74,15 @@ public class MainActivity extends AppCompatActivity { //implements ViewPager.OnP
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        credito = (ImageView) findViewById(R.id.credito);
+        credito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, Creditos.class);
+                startActivity(myIntent);
+            }
+        });
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = this.getWindow();
@@ -234,5 +244,12 @@ public class MainActivity extends AppCompatActivity { //implements ViewPager.OnP
             return sb;
         }
     }
+
+    /*public void vaicreditos(View v)
+    {
+        Intent myIntent = new Intent(MainActivity.this, Creditos.class);
+        startActivity(myIntent);
+    }*/
+
 }
 

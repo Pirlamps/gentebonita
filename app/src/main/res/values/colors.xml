@@ -2,8 +2,10 @@
 <resources>
     <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#343434</color>
+    <color name="colorPrimaryDark2">#191919</color>
     <color name="colorRed">#dd4949</color>
     <color name="colorslidefocus">#CD2F2F</color>
     <color name="colorslide">#CCCCCC</color>
+    <color name="colorslide2">#6A6A6A</color>
     <color name="colorWhite">#FFFFFF</color>
 </resources>

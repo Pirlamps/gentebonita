@@ -73,6 +73,7 @@ public class TabVotacao extends Fragment
 
     private int dotsCount;
     private ImageView[] dots;
+    private ImageView credito;
     private LinearLayout pager_indicator;
 
     //private OfertaAdapter mAdapter3;
