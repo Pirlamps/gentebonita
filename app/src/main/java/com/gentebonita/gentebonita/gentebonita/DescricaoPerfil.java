@@ -52,16 +52,32 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Vinicius on 11/07/2017.
+ * Created by Vinicius on 12/07/2017.
  */
 
-public class Creditos extends AppCompatActivity {
+public class DescricaoPerfil extends AppCompatActivity {
 
+    String urlf = "";
+    ProgressDialog progress = null;
+    Activity ct1;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+    private static ViewPagerAdapter adapter;
+    FuncoesBasicas fb = new FuncoesBasicas();
+
+    private int dotsCount;
+    private ImageView[] dots;
+    private ImageView credito;
+    private LinearLayout pager_indicator;
+
+    //private OfertaAdapter mAdapter3;
+
+    RequestQueue requestQueue;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.creditos);
+        setContentView(R.layout.descricao_perfil);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -80,9 +96,62 @@ public class Creditos extends AppCompatActivity {
             }
         });
 
+
+        List<Fragment> list = new ArrayList<Fragment>();
+
+        /*ImageSlider img1 = new ImageSlider();
+        img1.url="0";
+        list.add(img1);*/
+
+        ImageSlider img2 = new ImageSlider();
+        img2.url="1";
+        list.add(img2);
+
+        ImageSlider img3 = new ImageSlider();
+        img3.url="2";
+        list.add(img3);
+
+        ImageSlider img4 = new ImageSlider();
+        img4.url="3";
+        list.add(img4);
+
+        com.gentebonita.gentebonita.gentebonita.ViewPagerAdapter a = new com.gentebonita.gentebonita.gentebonita.ViewPagerAdapter(this.getSupportFragmentManager(), list);
+        ViewPager pager = (ViewPager) findViewById(R.id.viewpager2);
+        pager.setAdapter(a);
+        pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        pager_indicator = (LinearLayout) findViewById(R.id.viewPagerCountDots);
+
+        dotsCount = a.getCount();
+        dots = new ImageView[dotsCount];
+
+        for (int i = 0; i < dotsCount; i++) {
+            dots[i] = new ImageView(this);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                dots[i].setImageDrawable(getResources().getDrawable(R.drawable.nonselecteditem_dot,null));
+            }
+            else
+            {
+                dots[i].setImageDrawable(getResources().getDrawable(R.drawable.nonselecteditem_dot));
+            }
+
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+            );
+
+            params.setMargins(8, 0, 8, 0);
+
+            pager_indicator.addView(dots[i], params);
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            dots[0].setImageDrawable(getResources().getDrawable(R.drawable.selecteditem_dot,null));
+        }
+        else
+        {
+            dots[0].setImageDrawable(getResources().getDrawable(R.drawable.selecteditem_dot));
+        }
+
     }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -100,7 +169,7 @@ public class Creditos extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.perfil) {
-            Intent myIntent = new Intent(Creditos.this, PerfilActivity.class);
+            Intent myIntent = new Intent(DescricaoPerfil.this, PerfilActivity.class);
             startActivity(myIntent);
         }
         else if(id == R.id.logout) {
@@ -114,5 +183,11 @@ public class Creditos extends AppCompatActivity {
 
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void vaicreditos(View v)
+    {
+        Intent myIntent = new Intent(DescricaoPerfil.this, Creditos.class);
+        startActivity(myIntent);
     }
 }

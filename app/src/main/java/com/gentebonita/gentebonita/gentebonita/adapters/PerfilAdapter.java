@@ -28,6 +28,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import java.math.BigDecimal;
 
+import com.gentebonita.gentebonita.gentebonita.DescricaoPerfil;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
@@ -64,17 +65,17 @@ public class PerfilAdapter extends RecyclerView.Adapter<PerfilAdapter.MyViewHold
             imagem = (ImageView) view.findViewById(R.id.imagem);
             div = (LinearLayout) view.findViewById(R.id.div);
             //divbusca = (LinearLayout) view.findViewById(R.id.divbusca);
-            /*divini = (LinearLayout) view.findViewById(R.id.divini);
+            //divini = (LinearLayout) view.findViewById(R.id.divini);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent myIntent = new Intent(mContext, OfertaEspActivity.class);
+                    Intent myIntent = new Intent(mContext, DescricaoPerfil.class);
                     Bundle b = new Bundle();
                     b.putInt("id", 1); //Your id
                     myIntent.putExtras(b); //Put your id to your next Intent
                     mContext.startActivity(myIntent);
                 }
-            });*/
+            });
         }
     }
 

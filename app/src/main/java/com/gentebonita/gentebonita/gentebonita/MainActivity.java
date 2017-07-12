@@ -75,14 +75,14 @@ public class MainActivity extends AppCompatActivity { //implements ViewPager.OnP
         setSupportActionBar(toolbar);
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        credito = (ImageView) findViewById(R.id.credito);
+        /*credito = (ImageView) findViewById(R.id.credito);
         credito.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, Creditos.class);
                 startActivity(myIntent);
             }
-        });
+        });*/
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = this.getWindow();
@@ -178,8 +178,8 @@ public class MainActivity extends AppCompatActivity { //implements ViewPager.OnP
         int id = item.getItemId();
 
         if (id == R.id.perfil) {
-            //Intent myIntent = new Intent(MainActivity.this, NewPerfilActivity.class);
-            //startActivity(myIntent);
+            Intent myIntent = new Intent(MainActivity.this, PerfilActivity.class);
+            startActivity(myIntent);
         }
         else if(id == R.id.logout) {
 
@@ -245,11 +245,11 @@ public class MainActivity extends AppCompatActivity { //implements ViewPager.OnP
         }
     }
 
-    /*public void vaicreditos(View v)
+    public void vaicreditos(View v)
     {
         Intent myIntent = new Intent(MainActivity.this, Creditos.class);
         startActivity(myIntent);
-    }*/
+    }
 
 }
 

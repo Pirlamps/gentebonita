@@ -50,18 +50,33 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 /**
- * Created by Vinicius on 11/07/2017.
+ * Created by Vinicius on 12/07/2017.
  */
 
-public class Creditos extends AppCompatActivity {
+public class PerfilActivity extends AppCompatActivity {
 
+    String urlf = "";
+    ProgressDialog progress = null;
+    Activity ct1;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+    private static ViewPagerAdapter adapter;
+    FuncoesBasicas fb = new FuncoesBasicas();
+
+    private int dotsCount;
+    private ImageView[] dots;
+    private ImageView credito;
+    private LinearLayout pager_indicator;
+
+    //private OfertaAdapter mAdapter3;
+
+    RequestQueue requestQueue;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.creditos);
+        setContentView(R.layout.perfil_activity);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -80,9 +95,8 @@ public class Creditos extends AppCompatActivity {
             }
         });
 
+
     }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -100,7 +114,7 @@ public class Creditos extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.perfil) {
-            Intent myIntent = new Intent(Creditos.this, PerfilActivity.class);
+            Intent myIntent = new Intent(PerfilActivity.this, PerfilActivity.class);
             startActivity(myIntent);
         }
         else if(id == R.id.logout) {
@@ -114,5 +128,11 @@ public class Creditos extends AppCompatActivity {
 
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void vaicreditos(View v)
+    {
+        Intent myIntent = new Intent(PerfilActivity.this, Creditos.class);
+        startActivity(myIntent);
     }
 }

@@ -2,6 +2,7 @@ package com.gentebonita.gentebonita.gentebonita;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -29,6 +30,7 @@ public class FiltroMultiplo  extends AppCompatActivity {
 
     private int dotsCount;
     private ImageView[] dots;
+    private ImageView credito;
     private LinearLayout pager_indicator;
 
     @Override
@@ -47,8 +49,8 @@ public class FiltroMultiplo  extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.perfil) {
-            //Intent myIntent = new Intent(MainActivity.this, NewPerfilActivity.class);
-            //startActivity(myIntent);
+            Intent myIntent = new Intent(FiltroMultiplo.this, PerfilActivity.class);
+            startActivity(myIntent);
         }
         else if(id == R.id.logout) {
 
@@ -68,6 +70,15 @@ public class FiltroMultiplo  extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.filtro_multiplo);
+
+        /*credito = (ImageView) findViewById(R.id.credito);
+        credito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(FiltroMultiplo.this, Creditos.class);
+                startActivity(myIntent);
+            }
+        });*/
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -111,5 +122,11 @@ public class FiltroMultiplo  extends AppCompatActivity {
                 if (checked)
                 break;
         }
+    }
+
+    public void vaicreditos(View v)
+    {
+        Intent myIntent = new Intent(FiltroMultiplo.this, Creditos.class);
+        startActivity(myIntent);
     }
 }
