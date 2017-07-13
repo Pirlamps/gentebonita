@@ -64,6 +64,9 @@ public class PerfilActivity extends AppCompatActivity {
     private static ViewPagerAdapter adapter;
     FuncoesBasicas fb = new FuncoesBasicas();
 
+    private TextView genero, fumante, pets, religiao, signo, interesses, alimentacao;
+    private EditText idadede, idadeate, palavras;
+
     private int dotsCount;
     private ImageView[] dots;
     private ImageView credito;
@@ -92,6 +95,74 @@ public class PerfilActivity extends AppCompatActivity {
                 //finalizar tela ao clicar no voltar
                 finish();
 
+            }
+        });
+
+        genero = (TextView) findViewById(R.id.genero);
+        genero.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(PerfilActivity.this, FiltroMultiplo.class);
+                Bundle b = new Bundle();
+                b.putString("id", "genero"); //Your id
+                myIntent.putExtras(b); //Put your id to your next Intent
+                PerfilActivity.this.startActivity(myIntent);
+                //Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
+                //getActivity().startActivity(myIntent);
+            }
+        });
+
+        fumante = (TextView) findViewById(R.id.fumante);
+        fumante.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(PerfilActivity.this, FiltroMultiplo.class);
+                PerfilActivity.this.startActivity(myIntent);
+            }
+        });
+
+        pets = (TextView) findViewById(R.id.pets);
+        pets.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(PerfilActivity.this, FiltroMultiplo.class);
+                PerfilActivity.this.startActivity(myIntent);
+            }
+        });
+
+        religiao = (TextView) findViewById(R.id.religiao);
+        religiao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(PerfilActivity.this, FiltroMultiplo.class);
+                PerfilActivity.this.startActivity(myIntent);
+            }
+        });
+
+        signo = (TextView) findViewById(R.id.signo);
+        signo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(PerfilActivity.this, FiltroMultiplo.class);
+                PerfilActivity.this.startActivity(myIntent);
+            }
+        });
+
+        interesses = (TextView) findViewById(R.id.interesses);
+        interesses.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(PerfilActivity.this, FiltroMultiplo.class);
+                PerfilActivity.this.startActivity(myIntent);
+            }
+        });
+
+        alimentacao = (TextView) findViewById(R.id.alimentacao);
+        alimentacao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(PerfilActivity.this, FiltroMultiplo.class);
+                PerfilActivity.this.startActivity(myIntent);
             }
         });
 
