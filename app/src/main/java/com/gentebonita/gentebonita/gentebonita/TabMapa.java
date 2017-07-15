@@ -74,6 +74,7 @@ public class TabMapa extends Fragment implements OnMapReadyCallback {
     RelativeLayout tv1,tv2,tv3,tv4;
     TextView t1,t2,t3,t4;
     ImageView i1,i1v,i2,i2v,i3,i3v,i4,i4v;
+    FloatingActionButton filtromapa;
     String urlf = "https://cne.net.br/backend-corp/public/";
     ProgressDialog progress = null;
     Context ct1 = null;
@@ -124,6 +125,7 @@ public class TabMapa extends Fragment implements OnMapReadyCallback {
         fragmentTransaction.add(R.id.map, mMapFragment);
         fragmentTransaction.commit();
         mMapFragment.getMapAsync(this);
+
 
         tv1 = (RelativeLayout) getActivity().findViewById(R.id.map);
         tv2 = (RelativeLayout) getActivity().findViewById(R.id.map2);
@@ -265,13 +267,17 @@ public class TabMapa extends Fragment implements OnMapReadyCallback {
         });
 
 
-
-        /*FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        filtromapa = (FloatingActionButton) view.findViewById(R.id.fab);
+        filtromapa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Intent myIntent = new Intent(getActivity(), FiltroMapa.class);
+                startActivity(myIntent);
+
+                
                 /*Intent myIntent = null;
-                myIntent = new Intent(getActivity(), PesquisaActivity.class);
+                myIntent = new Intent(getActivity(), FiltroMapa.class);
 
                 MainActivity actf = (MainActivity) getActivity();
                 String distancia = actf.buscadistancia;
@@ -287,9 +293,9 @@ public class TabMapa extends Fragment implements OnMapReadyCallback {
 
                 myIntent.putExtras(mBundle);
 
-                getActivity().startActivityForResult(myIntent, 1);
+                getActivity().startActivityForResult(myIntent, 1);*/
             }
-        });*/
+        });
 
     }
 
