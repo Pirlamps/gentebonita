@@ -90,15 +90,35 @@
                     android:paddingRight="2.5dp"
                     android:layout_weight="0.4">
 
-                    <ImageView
-                        android:scaleType="centerCrop"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/fotoslide1">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:scaleType="centerCrop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/fotoslide1">
+                        </ImageView>
+
+                        <ImageView
+                            android:scaleType="centerCrop"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/circulobranco"
+                            android:src="@drawable/x"
+                            android:padding="8dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true">
+                        </ImageView>
+
+
+                    </RelativeLayout>
 
 
 
-                    </ImageView>
+
 
                 </LinearLayout>
 
@@ -117,21 +137,58 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <ImageView
-                            android:scaleType="centerCrop"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingBottom="2.5dp"
-                            android:layout_weight="0.5"
-                            android:src="@drawable/fotoslide2"/>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5">
 
-                        <ImageView
-                            android:scaleType="centerCrop"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingTop="2.5dp"
-                            android:layout_weight="0.5"
-                            android:src="@drawable/fotoslide3"/>
+                            <ImageView
+                                android:scaleType="centerCrop"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="2.5dp"
+                                android:src="@drawable/fotoslide2"/>
+
+                            <ImageView
+                                android:scaleType="centerCrop"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/circulobranco"
+                                android:src="@drawable/x"
+                                android:padding="5dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true">
+                            </ImageView>
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5">
+
+                            <ImageView
+                                android:scaleType="centerCrop"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="2.5dp"
+                                android:src="@drawable/fotoslide3"/>
+
+                            <ImageView
+                                android:scaleType="centerCrop"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/circulobranco"
+                                android:src="@drawable/x"
+                                android:padding="5dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true">
+                            </ImageView>
+
+                        </RelativeLayout>
 
                     </LinearLayout>
 
@@ -152,12 +209,31 @@
                     android:paddingRight="2.5dp"
                     android:layout_weight="0.4">
 
-                    <ImageView
-                        android:scaleType="centerCrop"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                        android:src="@drawable/fotodefault"/>
+                        <ImageView
+                            android:scaleType="centerCrop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/fotodefault"/>
+
+                        <ImageView
+                            android:scaleType="centerCrop"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/circulobranco"
+                            android:src="@drawable/mais"
+                            android:padding="5dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true">
+                        </ImageView>
+
+                    </RelativeLayout>
+
+
 
                 </LinearLayout>
 
@@ -168,12 +244,29 @@
                     android:paddingRight="2.5dp"
                     android:layout_weight="0.4">
 
-                    <ImageView
-                        android:scaleType="centerCrop"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                        android:src="@drawable/fotodefault"/>
+                        <ImageView
+                            android:scaleType="centerCrop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/fotodefault"/>
+
+                        <ImageView
+                            android:scaleType="centerCrop"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/circulobranco"
+                            android:src="@drawable/mais"
+                            android:padding="5dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true">
+                        </ImageView>
+
+                    </RelativeLayout>
 
                 </LinearLayout>
 
@@ -184,12 +277,29 @@
                     android:paddingRight="5dp"
                     android:layout_weight="0.4">
 
-                    <ImageView
-                        android:scaleType="centerCrop"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                        android:src="@drawable/fotodefault"/>
+                        <ImageView
+                            android:scaleType="centerCrop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/fotodefault"/>
+
+                        <ImageView
+                            android:scaleType="centerCrop"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/circulobranco"
+                            android:src="@drawable/mais"
+                            android:padding="5dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true">
+                        </ImageView>
+
+                    </RelativeLayout>
 
                 </LinearLayout>
 

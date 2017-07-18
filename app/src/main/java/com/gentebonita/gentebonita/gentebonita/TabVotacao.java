@@ -19,6 +19,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
@@ -160,7 +161,204 @@ public class TabVotacao extends Fragment
         {
             dots[0].setImageDrawable(getResources().getDrawable(R.drawable.selecteditem_dot));
         }
+
+        //nota1
+
+        final TextView nota1 = (TextView) view.findViewById(R.id.nota1);
+        final TextView nota2 = (TextView) view.findViewById(R.id.nota2);
+        final TextView nota3 = (TextView) view.findViewById(R.id.nota3);
+        final TextView nota4 = (TextView) view.findViewById(R.id.nota4);
+        final TextView nota5 = (TextView) view.findViewById(R.id.nota5);
+        final TextView nota6 = (TextView) view.findViewById(R.id.nota6);
+        final TextView nota7 = (TextView) view.findViewById(R.id.nota7);
+        final TextView nota8 = (TextView) view.findViewById(R.id.nota8);
+        final TextView nota9 = (TextView) view.findViewById(R.id.nota9);
+        final TextView nota10 = (TextView) view.findViewById(R.id.nota10);
+
+        nota1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                nota1.setBackgroundResource(R.drawable.circulovermelho);
+                nota2.setBackgroundResource(0);
+                nota3.setBackgroundResource(0);
+                nota4.setBackgroundResource(0);
+                nota5.setBackgroundResource(0);
+                nota6.setBackgroundResource(0);
+                nota7.setBackgroundResource(0);
+                nota8.setBackgroundResource(0);
+                nota9.setBackgroundResource(0);
+                nota10.setBackgroundResource(0);
+
+            }
+        });
+
+        nota2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                nota1.setBackgroundResource(0);
+                nota2.setBackgroundResource(R.drawable.circulovermelho);
+                nota3.setBackgroundResource(0);
+                nota4.setBackgroundResource(0);
+                nota5.setBackgroundResource(0);
+                nota6.setBackgroundResource(0);
+                nota7.setBackgroundResource(0);
+                nota8.setBackgroundResource(0);
+                nota9.setBackgroundResource(0);
+                nota10.setBackgroundResource(0);
+
+            }
+        });
+
+        nota3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                nota1.setBackgroundResource(0);
+                nota2.setBackgroundResource(0);
+                nota3.setBackgroundResource(R.drawable.circulovermelho);
+                nota4.setBackgroundResource(0);
+                nota5.setBackgroundResource(0);
+                nota6.setBackgroundResource(0);
+                nota7.setBackgroundResource(0);
+                nota8.setBackgroundResource(0);
+                nota9.setBackgroundResource(0);
+                nota10.setBackgroundResource(0);
+
+            }
+        });
+
+        nota4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                nota1.setBackgroundResource(0);
+                nota2.setBackgroundResource(0);
+                nota3.setBackgroundResource(0);
+                nota4.setBackgroundResource(R.drawable.circulovermelho);
+                nota5.setBackgroundResource(0);
+                nota6.setBackgroundResource(0);
+                nota7.setBackgroundResource(0);
+                nota8.setBackgroundResource(0);
+                nota9.setBackgroundResource(0);
+                nota10.setBackgroundResource(0);
+
+            }
+        });
+
+        nota5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                nota1.setBackgroundResource(0);
+                nota2.setBackgroundResource(0);
+                nota3.setBackgroundResource(0);
+                nota4.setBackgroundResource(0);
+                nota5.setBackgroundResource(R.drawable.circulovermelho);
+                nota6.setBackgroundResource(0);
+                nota7.setBackgroundResource(0);
+                nota8.setBackgroundResource(0);
+                nota9.setBackgroundResource(0);
+                nota10.setBackgroundResource(0);
+
+            }
+        });
+
+        nota6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                nota1.setBackgroundResource(0);
+                nota2.setBackgroundResource(0);
+                nota3.setBackgroundResource(0);
+                nota4.setBackgroundResource(0);
+                nota5.setBackgroundResource(0);
+                nota6.setBackgroundResource(R.drawable.circulovermelho);
+                nota7.setBackgroundResource(0);
+                nota8.setBackgroundResource(0);
+                nota9.setBackgroundResource(0);
+                nota10.setBackgroundResource(0);
+
+            }
+        });
+
+        nota7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                nota1.setBackgroundResource(0);
+                nota2.setBackgroundResource(0);
+                nota3.setBackgroundResource(0);
+                nota4.setBackgroundResource(0);
+                nota5.setBackgroundResource(0);
+                nota6.setBackgroundResource(0);
+                nota7.setBackgroundResource(R.drawable.circulovermelho);
+                nota8.setBackgroundResource(0);
+                nota9.setBackgroundResource(0);
+                nota10.setBackgroundResource(0);
+
+            }
+        });
+
+        nota8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                nota1.setBackgroundResource(0);
+                nota2.setBackgroundResource(0);
+                nota3.setBackgroundResource(0);
+                nota4.setBackgroundResource(0);
+                nota5.setBackgroundResource(0);
+                nota6.setBackgroundResource(0);
+                nota7.setBackgroundResource(0);
+                nota8.setBackgroundResource(R.drawable.circulovermelho);
+                nota9.setBackgroundResource(0);
+                nota10.setBackgroundResource(0);
+
+            }
+        });
+
+        nota9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                nota1.setBackgroundResource(0);
+                nota2.setBackgroundResource(0);
+                nota3.setBackgroundResource(0);
+                nota4.setBackgroundResource(0);
+                nota5.setBackgroundResource(0);
+                nota6.setBackgroundResource(0);
+                nota7.setBackgroundResource(0);
+                nota8.setBackgroundResource(0);
+                nota9.setBackgroundResource(R.drawable.circulovermelho);
+                nota10.setBackgroundResource(0);
+
+            }
+        });
+
+        nota10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                nota1.setBackgroundResource(0);
+                nota2.setBackgroundResource(0);
+                nota3.setBackgroundResource(0);
+                nota4.setBackgroundResource(0);
+                nota5.setBackgroundResource(0);
+                nota6.setBackgroundResource(0);
+                nota7.setBackgroundResource(0);
+                nota8.setBackgroundResource(0);
+                nota9.setBackgroundResource(0);
+                nota10.setBackgroundResource(R.drawable.circulovermelho);
+
+            }
+        });
+
     }
+
+
+
 
 
 

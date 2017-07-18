@@ -151,7 +151,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="1"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/colorWhite"
                         android:textSize="17dp" />
 
                 </RelativeLayout>
@@ -170,7 +170,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="2"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/colorWhite"
                         android:textSize="17dp" />
 
                 </RelativeLayout>
