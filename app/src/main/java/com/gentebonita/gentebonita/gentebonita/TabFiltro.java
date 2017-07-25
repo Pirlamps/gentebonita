@@ -62,7 +62,7 @@ import java.util.Map;
 
 public class TabFiltro  extends Fragment{
 
-    String urlf = "http://cne.softforlife.com/public/";
+    String urlf = "https://gentebonita.net.br/api/public/";
     ProgressDialog progress = null;
     Activity ct1;
     private TabLayout tabLayout;
@@ -142,9 +142,11 @@ public class TabFiltro  extends Fragment{
             public void onClick(View v) {
                 Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
                 Bundle b = new Bundle();
-                b.putString("id", "genero"); //Your id
+                b.putString("qual_filtro", "Genero");
+                b.putString("tela_origem", "filtro");
                 myIntent.putExtras(b); //Put your id to your next Intent
-                getActivity().startActivity(myIntent);
+                getActivity().startActivityForResult(myIntent, 1);
+
                 //Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
                 //getActivity().startActivity(myIntent);
             }
@@ -155,7 +157,11 @@ public class TabFiltro  extends Fragment{
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
-                getActivity().startActivity(myIntent);
+                Bundle b = new Bundle();
+                b.putString("qual_filtro", "Fumante");
+                b.putString("tela_origem", "filtro");
+                myIntent.putExtras(b); //Put your id to your next Intent
+                getActivity().startActivityForResult(myIntent, 1);
             }
         });
 
@@ -164,7 +170,11 @@ public class TabFiltro  extends Fragment{
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
-                getActivity().startActivity(myIntent);
+                Bundle b = new Bundle();
+                b.putString("qual_filtro", "Pets");
+                b.putString("tela_origem", "filtro");
+                myIntent.putExtras(b); //Put your id to your next Intent
+                getActivity().startActivityForResult(myIntent, 1);
             }
         });
 
@@ -173,7 +183,11 @@ public class TabFiltro  extends Fragment{
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
-                getActivity().startActivity(myIntent);
+                Bundle b = new Bundle();
+                b.putString("qual_filtro", "Religião");
+                b.putString("tela_origem", "filtro");
+                myIntent.putExtras(b); //Put your id to your next Intent
+                getActivity().startActivityForResult(myIntent, 1);
             }
         });
 
@@ -182,7 +196,11 @@ public class TabFiltro  extends Fragment{
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
-                getActivity().startActivity(myIntent);
+                Bundle b = new Bundle();
+                b.putString("qual_filtro", "Signo");
+                b.putString("tela_origem", "filtro");
+                myIntent.putExtras(b); //Put your id to your next Intent
+                getActivity().startActivityForResult(myIntent, 1);
             }
         });
 
@@ -191,7 +209,11 @@ public class TabFiltro  extends Fragment{
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
-                getActivity().startActivity(myIntent);
+                Bundle b = new Bundle();
+                b.putString("qual_filtro", "Interesses");
+                b.putString("tela_origem", "filtro");
+                myIntent.putExtras(b); //Put your id to your next Intent
+                getActivity().startActivityForResult(myIntent, 1);
             }
         });
 
@@ -200,7 +222,11 @@ public class TabFiltro  extends Fragment{
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(getActivity(), FiltroMultiplo.class);
-                getActivity().startActivity(myIntent);
+                Bundle b = new Bundle();
+                b.putString("qual_filtro", "Alimentação");
+                b.putString("tela_origem", "filtro");
+                myIntent.putExtras(b); //Put your id to your next Intent
+                getActivity().startActivityForResult(myIntent, 1);
             }
         });
 

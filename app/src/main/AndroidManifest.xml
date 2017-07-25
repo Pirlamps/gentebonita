@@ -15,7 +15,10 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
+    <!--
+    SECRET KEY: 43e7b015fb0166469a3d575588a5e57b
 
+    -->
 
 
     <application android:allowBackup="true"

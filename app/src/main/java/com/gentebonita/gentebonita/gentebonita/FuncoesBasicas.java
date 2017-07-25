@@ -67,6 +67,17 @@ public class FuncoesBasicas {
         dataf = dataaux2[2]+"-"+dataaux2[1]+"-"+dataaux2[0];
         return dataf;
     }
+
+    public String transfdataface(String data)
+    {
+        String dataf = "";
+        if(data.equals("")||data.equals(false)||data.equals("null")||data.isEmpty())        return dataf;
+        String[] dataaux = data.split(" ");
+        String[] dataaux2 = dataaux[0].split("-");
+        dataf = dataaux2[2]+"-"+dataaux2[1]+"-"+dataaux2[0];
+        return dataf;
+    }
+
     public String hashinvertido(Map<String, Integer> itemsaux, Integer valor)
     {
         String retorno = "";
